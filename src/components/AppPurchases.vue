@@ -1,7 +1,6 @@
 <template>
     <div>
         <h1>Purchases</h1>
-        {{customer.name}}
     </div>
 </template>
 
