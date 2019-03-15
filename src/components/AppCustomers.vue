@@ -4,7 +4,10 @@
         
         <ul>
             <li v-for="(customer, index) in customers" :key="index">
-                <div>{{ customer.name }} {{ customer.lastName }}</div>
+                <div>
+                    {{ customer.name }} {{ customer.lastName }} 
+                    <router-link :to="`/customers/${customer.id}`">Latest Purchases</router-link>
+                </div>
                 <div><button @click="deleteCustomer(index)">Delete {{ customer.name }}</button></div>
             </li>
         </ul>
@@ -29,37 +32,7 @@ export default {
           name: "",
           lastName: "",
           email: "",
-          listaProizvoda: []
-        }
-      ],
-      customers: [
-        {
-          name: "Pera",
-          lastName: "Peric",
-          email: "peric@email.com",
-          id: 1,
-          listaProizvoda: []
-        },
-        {
-          name: "jova",
-          lastName: "jovic",
-          email: "jovic@email.com",
-          id: 2,
-          listaProizvoda: []
-        },
-        {
-          name: "sima",
-          lastName: "simic",
-          email: "simic@email.com",
-          id: 3,
-          listaProizvoda: []
-        },
-        {
-          name: "zoran",
-          lastName: "zoric",
-          email: "zoric@email.com",
-          id: 3,
-          listaProizvoda: []
+          listaProizvoda: ["knjiga", "olovka", "sveska"]
         }
       ]
     };
@@ -73,7 +46,8 @@ export default {
     addCustomer() {
       this.customers.push({ ...this.customer });
     }
-  }
+  },
+  props: ["customers"]
 };
 </script>
 

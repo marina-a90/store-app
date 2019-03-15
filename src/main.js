@@ -9,6 +9,7 @@ import VueRouter from "vue-router";
 
 import AppCustomers from "./components/AppCustomers.vue";
 import AppProducts from "./components/AppProducts.vue";
+import AppPurchases from "./components/AppPurchases.vue";
 
 Vue.use(BootstrapVue);
 
@@ -18,7 +19,8 @@ Vue.config.productionTip = false;
 
 const routes = [
   { path: "/customers", component: AppCustomers },
-  { path: "/products", component: AppProducts }
+  { path: "/products", component: AppProducts },
+  { path: "/customers/:id", component: AppPurchases, name: "purchases" }
 ];
 
 const router = new VueRouter({

@@ -2,7 +2,7 @@
   <div id="app">
     <navbar-component></navbar-component>
     <img alt="Vue logo" src="./assets/logo.png">
-    <router-view />
+    <router-view :customers="customers" />
   </div>
 </template>
 
@@ -13,6 +13,40 @@ export default {
   name: "app",
   components: {
     NavbarComponent
+  },
+  data() {
+    return {
+      customers: [
+        {
+          name: "Pera",
+          lastName: "Peric",
+          email: "peric@email.com",
+          id: 1,
+          listaProizvoda: []
+        },
+        {
+          name: "jova",
+          lastName: "jovic",
+          email: "jovic@email.com",
+          id: 2,
+          listaProizvoda: []
+        },
+        {
+          name: "sima",
+          lastName: "simic",
+          email: "simic@email.com",
+          id: 3,
+          listaProizvoda: []
+        },
+        {
+          name: "zoran",
+          lastName: "zoric",
+          email: "zoric@email.com",
+          id: 3,
+          listaProizvoda: []
+        }
+      ]
+    };
   }
 };
 </script>
