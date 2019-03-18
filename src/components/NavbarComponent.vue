@@ -3,6 +3,7 @@
   <b-navbar toggleable="lg" type="dark" variant="info">
     <b-collapse is-nav id="nav_collapse">
       <b-navbar-nav>
+        <b-nav-item><a @click="$router.go(-1)">Back</a></b-nav-item>
         <b-nav-item><router-link to="/customers">Customers</router-link></b-nav-item>
         <b-nav-item><router-link to="/products">Products</router-link></b-nav-item>
       </b-navbar-nav>

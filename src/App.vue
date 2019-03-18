@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <navbar-component></navbar-component>
-    <img alt="Vue logo" src="./assets/logo.png">
+    <navbar-component/>
     <router-view :customers="customers" />
   </div>
 </template>
@@ -22,28 +21,28 @@ export default {
           lastName: "Peric",
           email: "peric@email.com",
           id: 1,
-          listaProizvoda: []
+          orders: ["book", "notebook"]
         },
         {
           name: "jova",
           lastName: "jovic",
           email: "jovic@email.com",
           id: 2,
-          listaProizvoda: []
+          orders: ["book"]
         },
         {
           name: "sima",
           lastName: "simic",
           email: "simic@email.com",
           id: 3,
-          listaProizvoda: []
+          orders: []
         },
         {
           name: "zoran",
           lastName: "zoric",
           email: "zoric@email.com",
           id: 3,
-          listaProizvoda: []
+          orders: []
         }
       ]
     };

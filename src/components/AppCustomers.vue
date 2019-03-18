@@ -45,6 +45,9 @@ export default {
     },
     addCustomer() {
       this.customers.push({ ...this.customer });
+      this.customer.name = "";
+      this.customer.lastName = "";
+      this.customer.email = "";
     }
   },
   props: ["customers"]
