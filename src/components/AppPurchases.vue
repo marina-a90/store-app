@@ -15,6 +15,8 @@
         </table> 
         <div v-else>{{ customerArray[0].name }} doesn't have any orders.</div> -->
 
+
+
         <h1>{{ getCustomer.name }}'s Purchases</h1>
         
         <div>Name: {{ getCustomer.name }} {{ getCustomer.lastName }}</div>
@@ -39,7 +41,7 @@ export default {
     props: ["customers"],
     data() {
         return {
-            // customerArray: this.customers.filter(cust => cust.id == this.$route.params.id),
+            customerArray: this.customers.filter(cust => cust.id == this.$route.params.id),
         }
     }, 
     computed: {
@@ -53,12 +55,12 @@ export default {
 </script>
 
 <style scoped>
-table,
-th,
-td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-}
+    table,
+    th,
+    td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    }
 </style>
